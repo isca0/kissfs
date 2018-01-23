@@ -10,9 +10,9 @@ services:
     volumes:
       - ${VOL}:/www
     networks:
-      - trae
+      - web
 
 networks:
-  trae:
+  web:
     external:
-      name: trae
+      name: web

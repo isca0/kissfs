@@ -38,11 +38,11 @@ docker built -t kissfs .
   
 ### Run from Docker compose
   
-This compose use a custom network called trae. If you dont want use custom network remove `networks`  
+This compose use a custom network called web. If you dont want use custom network remove `networks`  
 from this compose file.  
   
 ```
-docker network create trae
+docker network create web
 export VOL="/somefolder";export HOST=127.0.0.1; docker-compose up
 ```
   
