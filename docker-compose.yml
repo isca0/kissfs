@@ -1,0 +1,18 @@
+---
+version: '2'
+
+services:
+  kissfs:
+    image: kissfs
+    container_name: kissfs
+    ports:
+      - ${HOST}:3000:3000
+    volumes:
+      - ${VOL}:/www
+    networks:
+      - trae
+
+networks:
+  trae:
+    external:
+      name: trae
