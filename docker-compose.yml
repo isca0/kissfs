@@ -5,14 +5,13 @@ services:
   kissfs:
     image: kissfs
     container_name: kissfs
+    environment:
+      - KISSFS_DIR=${KISSFS_DIR}
     ports:
-      - ${HOST}:3000:3000
-    volumes:
-      - ${VOL}:/www
+      #- "${HOST}:3000:3000"
+      - "3000:3000"
     networks:
       - web
 
 networks:
   web:
-    external:
-      name: web
